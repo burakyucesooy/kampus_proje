@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etkinlikler | Kampüs Kulübü</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 <header><div class="brand">Kampüs Kulübü</div><nav aria-label="Ana menü"><a href="index.html">Ana Sayfa</a>
@@ -12,7 +13,16 @@
 <a href="hakkimizda.html">Hakkımızda</a></nav></header>
 <main><p class="eyebrow">KAMPÜS KULÜBÜ</p><h1>Etkinlik takvimi</h1>
 <p class="intro">Kampüs yaşamına hareket katacak yedi buluşma. Etkinlik ve tarihler örnek olarak hazırlanmıştır.</p>
-<section class="grid" aria-label="Örnek etkinlikler">
+<form class="event-search" id="event-search-form" role="search">
+  <div class="search-control">
+    <label for="event-search">Etkinliklerde ara</label>
+    <input id="event-search" type="search" placeholder="Etkinlik, spor veya konum ara" autocomplete="off" aria-controls="event-list">
+  </div>
+  <button class="search-clear" id="clear-search" type="button">Temizle</button>
+</form>
+<p class="search-count" id="event-count" role="status" aria-live="polite" aria-atomic="true">7 etkinlik gösteriliyor.</p>
+<p class="search-empty" id="event-empty" hidden>Aramanızla eşleşen etkinlik bulunamadı. Farklı bir etkinlik adı veya spor dalı deneyin.</p>
+<section class="grid" id="event-list" aria-label="Örnek etkinlikler">
 <article><p class="meta">12 KASIM / 14.00</p><h2>3x3 Basketbol</h2><p>Kampüs takımlarıyla kısa maçlarda sahaya çık, takımını kur.</p><p>Yer: Açık basketbol sahası</p></article>
 <article><p class="meta">19 KASIM / 14.00</p><h2>Voleybol Buluşması</h2><p>Arkadaşlarınla takım ol; başlangıç seviyesine uygun maçlara katıl.</p><p>Yer: Spor salonu</p></article>
 <article><p class="meta">26 KASIM / 14.00</p><h2>Yoga ve Esneme</h2><p>Ders temposuna ara ver, rahatlatıcı bir hareket seansına katıl.</p><p>Yer: Çok amaçlı salon</p></article>
